@@ -1,7 +1,5 @@
-import React, { useState, Fragment, useCallback } from 'react';
+import React, { useState, useCallback } from 'react';
 import './Wall.css';
-import anime from 'animejs';
-import Window from './Window.js';
 import WindowFrame from './WindowFrame.js';
 
 function Wall() {

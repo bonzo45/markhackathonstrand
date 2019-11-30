@@ -1,4 +1,4 @@
-import React, { useState, Fragment, useCallback } from 'react';
+import React  from 'react';
 
 function Window({number}) {
     let colour;
