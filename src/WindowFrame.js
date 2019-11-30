@@ -3,7 +3,7 @@ import anime from 'animejs';
 import Window from './Window.js';
 
 function WindowFrame({number, left, top, width, height, screenWidth, screenHeight}) {
-  const duration = 500;
+  const duration = 300;
   const [open, setOpen] = useState(false);
 
   const handleClick = (e) => {
@@ -32,7 +32,7 @@ function WindowFrame({number, left, top, width, height, screenWidth, screenHeigh
         width: `${screenWidth}px`,
         height: `${screenHeight}px`,
         duration: duration,
-        easing: 'easeInOutQuad',
+        easing: 'easeInOutSine',
       };
       tl.add(first, 0)
       tl.add(second, 0)

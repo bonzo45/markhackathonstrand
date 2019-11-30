@@ -10,7 +10,7 @@ function Window() {
         "position": "relative",
         "box-shadow": "0px 0px 20px 0 rgba(225, 247, 255, 0.5)",
     }}>
-        <div style={{
+{/*        <div style={{
             "position": "absolute",
             "top": "10%",
             "left": "10%",
@@ -26,7 +26,7 @@ function Window() {
             "height": "40%",
             "backgroundColor": "#1f404c",
         }} />
-    </div>
+*/}    </div>
   );
 }
 
