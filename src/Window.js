@@ -21,7 +21,7 @@ function Window({number}) {
         "backgroundColor": colour,
         "color": "black",
         "position": "relative",
-        "box-shadow": `0px 0px 20px 0 ${shadowColour}`,
+        "box-shadow": `0px 0px 50px 10px ${shadowColour}`,
     }}>
 {/*        <div style={{
             "position": "absolute",
