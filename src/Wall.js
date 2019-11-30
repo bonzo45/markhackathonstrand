@@ -15,10 +15,11 @@ function Wall() {
     }
   }, []);
 
-  const windowTop = 50;
   const windowSpacing = 50;
+  const windowTop = windowSpacing;
   const windowWidth = 250;
-  const windowHeight = height - 2 * windowSpacing;
+  const windowHeight = (height - 3 * windowSpacing) / 2;
+  const windowsBelowTop = windowSpacing + windowHeight + windowSpacing;
   const paddingLeft = (width - windowWidth * 3 - windowSpacing * 2) / 2;
   const window1Left = paddingLeft;
   const window2Left = window1Left + windowWidth + windowSpacing;
@@ -55,6 +56,33 @@ function Wall() {
         number={3}
         left={window3Left}
         top={windowTop}
+        width={windowWidth}
+        height={windowHeight}
+        screenWidth={width}
+        screenHeight={height}
+      />
+      <WindowFrame
+        number={4}
+        left={window1Left}
+        top={windowsBelowTop}
+        width={windowWidth}
+        height={windowHeight}
+        screenWidth={width}
+        screenHeight={height}
+      />
+      <WindowFrame
+        number={5}
+        left={window2Left}
+        top={windowsBelowTop}
+        width={windowWidth}
+        height={windowHeight}
+        screenWidth={width}
+        screenHeight={height}
+      />
+      <WindowFrame
+        number={6}
+        left={window3Left}
+        top={windowsBelowTop}
         width={windowWidth}
         height={windowHeight}
         screenWidth={width}
