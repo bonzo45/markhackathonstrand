@@ -1,0 +1,23 @@
+.Things {
+  position: relative;
+  width: 600px;
+  height: 600px;
+}
+
+.Thing {
+  display: inline-block;
+  width: 300px;
+  height: 200px;
+  background-color: blue;
+}
+
+.ThingToInflate {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 0px;
+  height: 0px;
+  background-color: blue;
+  overflow: hidden;
+  z-index: 10;
+}
