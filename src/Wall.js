@@ -17,7 +17,7 @@ function Wall() {
 
   const windowSpacing = 50;
   const windowTop = windowSpacing;
-  const windowWidth = 250;
+  const windowWidth = 200;
   const windowHeight = (height - 3 * windowSpacing) / 2;
   const windowsBelowTop = windowSpacing + windowHeight + windowSpacing;
   const paddingLeft = (width - windowWidth * 3 - windowSpacing * 2) / 2;
