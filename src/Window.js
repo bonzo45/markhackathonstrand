@@ -5,9 +5,10 @@ function Window() {
     <div style={{
         "width": "100%",
         "height": "100%",
-        "backgroundColor": "#e1f7ff",
+        "backgroundColor": "rgb(225, 247, 255)",
         "color": "black",
         "position": "relative",
+        "box-shadow": "0px 0px 20px 0 rgba(225, 247, 255, 0.5)",
     }}>
         <div style={{
             "position": "absolute",
