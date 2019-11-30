@@ -5,7 +5,8 @@ function Window() {
     <div style={{
         "width": "100%",
         "height": "100%",
-        "background-color": "red",
+        "backgroundColor": "#e1f7ff",
+        "color": "black",
     }}>
         A window!
     </div>
