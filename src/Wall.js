@@ -6,6 +6,7 @@ import Window from './Window.js';
 function Wall() {
   const [width, setWidth] = useState(0);
   const [height, setHeight] = useState(0);
+  const [open, setOpen] = useState(false);
 
   const measuredRef = useCallback(node => {
     if (node !== null) {
@@ -23,6 +24,31 @@ function Wall() {
   const window2Left = window1Left + windowWidth + windowSpacing;
   const window3Left = window2Left + windowWidth + windowSpacing;
 
+  const handleClick = (e) => {
+    if (open) {
+      anime({
+        targets: '.window-frame',
+        left: `${window1Left}px`,
+        top: `${windowTop}px`,
+        width: `${windowWidth}px`,
+        height: `${windowHeight}px`,
+        duration: 500,
+        easing: 'easeInOutQuad',
+      });
+    } else {
+      anime({
+        targets: '.window-frame',
+        top: '0px',
+        left: '0px',
+        width: `${width}px`,
+        height: `${height}px`,
+        duration: 500,
+        easing: 'easeInOutQuad',
+      });
+    }
+    setOpen(!open);
+  }
+
   return (
     <div
       style={{
@@ -32,12 +58,15 @@ function Wall() {
       }}
       ref={measuredRef}
     >
-      <div className="window-frame" style={{
-        "left": `${window1Left}px`,
-        "top": `${windowTop}px`,
-        "width": `${windowWidth}px`,
-        "height": `${windowHeight}px`,
-      }}>
+      <div
+        className="window-frame" style={{
+          "left": `${window1Left}px`,
+          "top": `${windowTop}px`,
+          "width": `${windowWidth}px`,
+          "height": `${windowHeight}px`,
+        }}
+        onClick={handleClick}
+      >
         <Window />
       </div>
       <div className="window-frame" style={{
@@ -45,7 +74,9 @@ function Wall() {
         "top": `${windowTop}px`,
         "width": `${windowWidth}px`,
         "height": `${windowHeight}px`,
-      }}>
+      }}
+        onClick={handleClick}
+      >
         <Window />
       </div>
       <div className="window-frame" style={{
@@ -53,7 +84,9 @@ function Wall() {
         "top": `${windowTop}px`,
         "width": `${windowWidth}px`,
         "height": `${windowHeight}px`,
-      }}>
+      }}
+        onClick={handleClick}
+      >
         <Window />
       </div>
     </div>
