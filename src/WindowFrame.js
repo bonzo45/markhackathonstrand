@@ -3,13 +3,17 @@ import anime from 'animejs';
 import Window from './Window.js';
 
 function WindowFrame({number, left, top, width, height, screenWidth, screenHeight}) {
+  const cheekyDuration = 100;
+  const notsocheekyDuration = 600;
   const duration = 300;
   const [open, setOpen] = useState(false);
 
   const handleClick = (e) => {
     if (open) {
-      anime({
+      const tl = anime.timeline();
+      const first = {
         targets: `.window-frame-${number}`,
+        scale: '0.95',
         left: `${left}px`,
         top: `${top}px`,
         width: `${width}px`,
@@ -17,7 +21,14 @@ function WindowFrame({number, left, top, width, height, screenWidth, screenHeigh
         duration: duration,
         easing: 'easeInOutQuad',
         zIndex: '0',
-      });
+      };
+      const second = {
+        targets: `.window-frame-${number}`,
+        scale: '1.00',
+        duration: notsocheekyDuration,
+      }
+      tl.add(first, 0)
+      tl.add(second, duration)
     } else {
       const tl = anime.timeline();
       const first = {
@@ -27,6 +38,13 @@ function WindowFrame({number, left, top, width, height, screenWidth, screenHeigh
       };
       const second = {
         targets: `.window-frame-${number}`,
+        scale: '0.95',
+        duration: cheekyDuration,
+        easing: 'easeInOutSine',
+      };
+      const third = {
+        targets: `.window-frame-${number}`,
+        scale: '1.00',
         top: '0px',
         left: '0px',
         width: `${screenWidth}px`,
@@ -36,6 +54,7 @@ function WindowFrame({number, left, top, width, height, screenWidth, screenHeigh
       };
       tl.add(first, 0)
       tl.add(second, 0)
+      tl.add(third, cheekyDuration)
     }
     setOpen(!open);
   }

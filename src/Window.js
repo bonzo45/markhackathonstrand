@@ -22,6 +22,7 @@ function Window({number}) {
         "color": "black",
         "position": "relative",
         "boxShadow": `0px 0px 50px 10px ${shadowColour}`,
+        "cursor": "pointer",
     }}>
     </div>
   );
