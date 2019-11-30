@@ -50,7 +50,9 @@ function WindowFrame({number, left, top, width, height, screenWidth, screenHeigh
         }}
         onClick={handleClick}
       >
-        <Window />
+        <Window
+            number={number}
+        />
       </div>
   );
 }
