@@ -8,7 +8,6 @@ function Window() {
         "backgroundColor": "#e1f7ff",
         "color": "black",
     }}>
-        A window!
     </div>
   );
 }

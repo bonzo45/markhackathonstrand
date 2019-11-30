@@ -9,20 +9,14 @@ function Wall() {
 
   const measuredRef = useCallback(node => {
     if (node !== null) {
-      console.log(node);
       setWidth(node.clientWidth);
       setHeight(node.clientHeight);
     }
   }, []);
 
-  console.log("Width");
-  console.log(width);
-  console.log("Height");
-  console.log(height);
-
   const windowTop = 50;
   const windowSpacing = 50;
-  const windowWidth = 200;
+  const windowWidth = 250;
   const windowHeight = height - 2 * windowSpacing;
   const paddingLeft = (width - windowWidth * 3 - windowSpacing * 2) / 2;
   const window1Left = paddingLeft;
