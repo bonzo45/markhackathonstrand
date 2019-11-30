@@ -11,17 +11,19 @@ function Window() {
     }}>
         <div style={{
             "position": "absolute",
-            "top": "0px",
-            "width": "100%",
-            "height": "50%",
-            "backgroundColor": "red",
+            "top": "10%",
+            "left": "10%",
+            "width": "80%",
+            "height": "40%",
+            "backgroundColor": "#2ac6ff",
         }} />
         <div style={{
             "position": "absolute",
             "top": "50%",
-            "width": "100%",
-            "height": "50%",
-            "backgroundColor": "blue",
+            "left": "10%",
+            "width": "80%",
+            "height": "40%",
+            "backgroundColor": "#1f404c",
         }} />
     </div>
   );
