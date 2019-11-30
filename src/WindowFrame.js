@@ -19,7 +19,13 @@ function WindowFrame({number, left, top, width, height, screenWidth, screenHeigh
         zIndex: '0',
       });
     } else {
-      anime({
+      const tl = anime.timeline();
+      const first = {
+        targets: `.window-frame-${number}`,
+        zIndex: '1',
+        duration: 0,
+      };
+      const second = {
         targets: `.window-frame-${number}`,
         top: '0px',
         left: '0px',
@@ -27,8 +33,9 @@ function WindowFrame({number, left, top, width, height, screenWidth, screenHeigh
         height: `${screenHeight}px`,
         duration: duration,
         easing: 'easeInOutQuad',
-        zIndex: '1',
-      });
+      };
+      tl.add(first, 0)
+      tl.add(second, 0)
     }
     setOpen(!open);
   }
