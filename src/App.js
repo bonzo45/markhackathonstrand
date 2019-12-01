@@ -7,6 +7,7 @@ function App() {
     <div className="App">
       <SamButton kind="sensible" />
       <SamButton kind="jittery" />
+      <SamButton kind="smooth" />
     </div>
   );
 }

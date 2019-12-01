@@ -26,15 +26,13 @@ function SamButton({kind}) {
 
   const handleMouseDown = (e) => {
     const tl = anime.timeline();
-    if (kind === "sensible" || kind === "jittery") {
-      const shrink = {
-        targets: `.sam-button-${kind}`,
-        scale: '0.95',
-        duration: duration,
-        easing: animation,
-      };
-      tl.add(shrink, 0)
-    }
+    const shrink = {
+      targets: `.sam-button-${kind}`,
+      scale: '0.95',
+      duration: duration,
+      easing: animation,
+    };
+    tl.add(shrink, 0)
   }
 
   const handleClick = (e) => {
@@ -61,6 +59,15 @@ function SamButton({kind}) {
         easing: 'easeInOutElastic(1, 0.5)',
       };
       tl.add(jitter, 0)
+    } else if (kind === "smooth") {
+      const smoothDuration = 300;
+      const smooth = {
+        targets: `.sam-button-${kind}`,
+        scale: '1.00',
+        duration: smoothDuration,
+        easing: 'easeInOutSine',
+      };
+      tl.add(smooth, 0)
     }
   }
 
