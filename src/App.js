@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
-import Wall from './Wall.js';
+import SamButton from './SamButton.js';
 
 function App() {
   return (
     <div className="App">
-      <Wall />
+      <SamButton />
     </div>
   );
 }
