@@ -3,7 +3,7 @@ import anime from 'animejs';
 import './SamButton.css';
 
 function SamButton() {
-  const duration = 200;
+  const duration = 150;
   const animation = 'easeOutExpo';
 
   const handleClick = (e) => {
