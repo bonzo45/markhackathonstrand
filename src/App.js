@@ -8,6 +8,7 @@ function App() {
       <SamButton kind="sensible" />
       <SamButton kind="jittery" />
       <SamButton kind="smooth" />
+      <SamButton kind="springy" />
     </div>
   );
 }

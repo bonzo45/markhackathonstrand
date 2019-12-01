@@ -68,6 +68,15 @@ function SamButton({kind}) {
         easing: 'easeInOutSine',
       };
       tl.add(smooth, 0)
+    } else if (kind === "springy") {
+      const springDuration = 150;
+      const spring = {
+        targets: `.sam-button-${kind}`,
+        scale: '1.00',
+        duration: springDuration,
+        easing: 'spring(2, 80, 10, 50)',
+      };
+      tl.add(spring, 0)
     }
   }
 
