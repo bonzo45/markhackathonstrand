@@ -19,7 +19,7 @@ function WindowFrame({number, left, top, width, height, screenWidth, screenHeigh
         width: `${width}px`,
         height: `${height}px`,
         duration: duration,
-        easing: 'easeInOutQuad',
+        easing: 'easeInOutSine',
         zIndex: '0',
       };
       const second = {
