@@ -5,7 +5,8 @@ import SamButton from './SamButton.js';
 function App() {
   return (
     <div className="App">
-      <SamButton />
+      <SamButton kind="sensible" />
+      <SamButton kind="jittery" />
     </div>
   );
 }
